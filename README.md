@@ -25,3 +25,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 
 php artisan make:controller <nomeDoController>
+
+php artisan migrate
+
+php artisan make:migration create_articles_table --create="articles"
+php artisan make:migration <nomeDoArquivoMigrate> --create="<nomeDaTabela>"
