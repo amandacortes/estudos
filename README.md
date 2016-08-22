@@ -30,3 +30,12 @@ php artisan migrate
 
 php artisan make:migration create_articles_table --create="articles"
 php artisan make:migration <nomeDoArquivoMigrate> --create="<nomeDaTabela>"
+
+
+eloquent => é o cara que cria tudo
+
+cria o migration e o model
+php artisan make:model Aluno
+
+//melhor forma de debugar
+dd($aluno);

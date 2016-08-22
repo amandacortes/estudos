@@ -29,4 +29,6 @@ Route::get('/404', function(){
 	return view('paginas.dadosRota', ['pessoas'=>$pessoas] ); //retorna a pagina que está em resources/paginas/views/about.blade.php
 });
 
+
 Route::get('/alunos','AlunoController@index'); //vai estar em app/http/controllers
+Route::get('/alunos/{id}', 'AlunoController@show');

@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Aluno;
 
 use Illuminate\Http\Request;
 
@@ -14,8 +15,12 @@ class AlunoController extends Controller {
 	 */
 	public function index()
 	{
-		$pessoas = ['Hug1o', 'Joao', 'juca'];
-		return view('paginas.dadosRota', ['pessoas'=>$pessoas] ); //retorna a pagina que está em resources/paginas/views/about.blade.php
+		//retorna todos os campos e todos os registros
+		$alunos = Aluno::all();
+
+		//se eu der um echo de alunos ele vai me retornar em json
+
+		return view('paginas.aluno', ['alunos'=>$alunos] ); //retorna a pagina que está em resources/paginas/views/about.blade.php
 	}
 
 	/**
@@ -46,7 +51,8 @@ class AlunoController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$aluno = Aluno::find($id);
+		return view('paginas.detalheAluno',['aluno'=>$aluno]);
 	}
 
 	/**
@@ -57,7 +63,7 @@ class AlunoController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		
 	}
 
 	/**

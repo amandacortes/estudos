@@ -4,8 +4,9 @@
 		
 		
 		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		@yield('header')
-		
+<!-- 		
 		<style>
 			body {
 				margin: 0;
@@ -37,11 +38,11 @@
 			.quote {
 				font-size: 24px;
 			}
-		</style>
+		</style> -->
 	</head>
 <body>
-	
-	@yield('content')
-
+	<div class="container">
+		@yield('content')
+	</div>
 </body>
 </html>
