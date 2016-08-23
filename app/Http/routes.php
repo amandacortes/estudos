@@ -30,5 +30,9 @@ Route::get('/404', function(){
 });
 
 
+
 Route::get('/alunos','AlunoController@index'); //vai estar em app/http/controllers
+Route::get('/alunos/create', 'AlunoController@create');
 Route::get('/alunos/{id}', 'AlunoController@show');
+
+Route::post('/alunos', 'AlunoController@store');

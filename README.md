@@ -39,3 +39,7 @@ php artisan make:model Aluno
 
 //melhor forma de debugar
 dd($aluno);
+
+
+para criar o form
+composer require illuminate/html

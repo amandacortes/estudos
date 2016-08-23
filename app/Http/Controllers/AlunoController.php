@@ -4,7 +4,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Aluno;
 
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
+use Request;
 
 class AlunoController extends Controller {
 
@@ -30,7 +31,10 @@ class AlunoController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		$aluno = new Aluno();
+		return view('paginas.detalheAluno',['aluno'=>$aluno]);
+
+
 	}
 
 	/**
@@ -40,7 +44,17 @@ class AlunoController extends Controller {
 	 */
 	public function store()
 	{
-		//
+		$input = Request::all();
+
+		$aluno = new Aluno();
+
+		$aluno->ra = $input['ra'];
+		$aluno->name = $input['nome'];
+		$aluno->nomeMae = $input['nomeMae'];
+		$aluno->save();
+
+
+		return redirect('alunos');
 	}
 
 	/**
